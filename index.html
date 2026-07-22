@@ -5,10 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#176b48" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="description" content="Competitive quiz games powered by LECTOFIX INTERATIVE GAMES." />
     <title>Playwise | Powered by LECTOFIX INTERATIVE GAMES</title>
-    <script type="module" crossorigin src="/assets/index-DthwSlpa.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-t1K-w82l.css">
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('playwise-theme')
+        const theme = savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-Dye5WzIY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CdhTQMb_.css">
   </head>
   <body>
     <div id="root"></div>
